@@ -2,9 +2,9 @@ module.exports = function(demoAppModule) {
     demoAppModule
         .config(Config)
         .controller('GamesController', GamesController);
-}
+};
 
-function Config($stateProvider, $urlRouterProvider) {
+function Config($stateProvider) {
     $stateProvider.state('games', {
         url:'/games',
         templateUrl: '/views/games.html',
@@ -22,6 +22,6 @@ function Config($stateProvider, $urlRouterProvider) {
 
 function GamesController(text) {
     var vm = this;
-    vm.title = 'Games'
+    vm.title = 'Games';
     vm.text = text;
 }

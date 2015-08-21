@@ -2,9 +2,9 @@ module.exports = function(demoAppModule) {
     demoAppModule
         .config(Config)
         .controller('HomeController', HomeController);
-}
+};
 
-function Config($stateProvider, $urlRouterProvider) {
+function Config($stateProvider) {
     $stateProvider.state('home', {
         url:'/',
         templateUrl: '/views/home.html',
@@ -22,6 +22,6 @@ function Config($stateProvider, $urlRouterProvider) {
 
 function HomeController(text) {
     var vm = this;
-    vm.title = 'Index'
+    vm.title = 'Index';
     vm.text = text;
 }
